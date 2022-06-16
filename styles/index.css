@@ -1,0 +1,109 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --main-darkest-gray: #212529;
+    --main-dark-gray: #343A40;
+    --main-gray: #495057;
+    --main-light-gray: #6C757D;
+    --main-super-light-gray: #ADB5BD;
+    --main-light: #E9ECEF;
+    --main-lightest: #F8F9FA;
+}
+
+body{
+    background: linear-gradient(35deg, var(--main-super-light-gray), var(--main-light-gray));
+    background-repeat: no-repeat;
+}
+
+.topbar{
+    display: flex;
+    background: var(--main-darkest-gray);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    outline: 1px red solid;
+    row-gap: 30px;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+.project{
+    background: var(--main-gray);
+    width: 240px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+}
+img{
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    background-color: var(--main-super-light-gray);
+    border-radius: 20px;
+}
+
+.container:hover .overlay{
+    opacity: 1;
+}
+
+.overlay-text{
+    color: var(--main-light);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1{
+    font-weight: 1000;
+    color: var(--main-lightest);
+}
+
+h2{
+    font-size: 1.2rem;
+    color: var(--main-darkest-gray);
+}
