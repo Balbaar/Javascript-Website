@@ -33,7 +33,6 @@ body{
     display: flex;
     justify-content: space-between;
     padding-top: 50px;
-    outline: 1px red solid;
     row-gap: 30px;
     column-gap: 30px;
     flex-wrap: wrap;
@@ -48,7 +47,8 @@ a{
 }
 
 .project{
-    background: var(--main-gray);
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+    border: var(--main-darkest-gray) 3px solid;
     width: 240px;
     height: fit-content;
     display: flex;
@@ -88,14 +88,14 @@ img{
 
 .overlay-text{
     color: var(--main-light);
-    font-size: 20px;
+    font-size: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, 50%);
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: left;
 }
 
 h1{
@@ -105,5 +105,5 @@ h1{
 
 h2{
     font-size: 1.2rem;
-    color: var(--main-darkest-gray);
+    color: var(--main-lightest);
 }
