@@ -1,0 +1,133 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --main-darkest-gray: rgb(20, 21, 25);
+    --main-dark-gray: rgb(32,38,48);
+    --main-light-gray: rgb(37,45,56);
+    --main-lightest-gray: rgb(102,111,120);
+    --main-orange: rgb(252,118,19);
+    --main-white: white;
+}
+
+body{
+    background-color: var(--main-darkest-gray);
+}
+
+.object{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40%;
+}
+
+.container{
+    background-color: var(--main-dark-gray);
+    width: 400px;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.star{
+    background-color: var(--main-light-gray);
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 50%;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.title{
+    color: var(--main-white);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-left: 25px;
+    margin-top: 10px;
+    height: fit-content;
+}
+
+.text{
+    color: var(--main-lightest-gray);
+    margin-left: 25px;
+    font-size: 1.1rem;
+}
+
+.rating{
+    width: 350px;
+    margin-left: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.rate{
+    background-color: var(--main-light-gray);
+    color: var(--main-lightest-gray);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: ease-in-out 0.4s;
+}
+
+.rate:hover{
+    background-color: var(--main-orange);
+    color: var(--main-white);
+}
+
+.submit{
+    background-color: var(--main-orange);
+    border-radius: 30px;    
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--main-white);
+    text-align: center;    
+    height: 50px;
+    padding-top: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    transition: ease-in-out 0.4s;
+}
+
+.submit:hover{
+    background-color: var(--main-white);
+    color: var(--main-orange);
+}
+
+.item:nth-of-type(1){
+    grid-column: 1/1;
+}
+
+.item:nth-of-type(2){
+    grid-column: 1/5;
+    grid-row: 2/2;
+}
+
+.item:nth-of-type(3){
+    grid-column: 1/5;
+    grid-row: 3/3;
+}
+
+.item:nth-of-type(4){
+    grid-column: 1/5;
+    grid-row: 4/4;
+}
+
+.item:nth-of-type(5){
+    grid-column: 1/6;
+    grid-row: 5/5;
+}
