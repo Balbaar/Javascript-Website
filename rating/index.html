@@ -9,25 +9,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
     <script src="rate.js"></script>
-    <title>Document</title>
+    <title>Rating</title>
 </head>
 <body>
-    <div class="object">
+    <div class="objects">
 
-        <div class="container">
+        <div class="rate-container">
             <div class="star item">
-                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="" class="star-image">
             </div>
             <div class="title item">How did we do?</div>
             <div class="text item">Please let us know how we did with your support request. All feedback is appriciated tp help us improve our offering!</div>
             <div class="rating item">
-                <div class="rate">1</div>
-                <div class="rate">2</div>
-                <div class="rate">3</div>
-                <div class="rate">4</div>
-                <div class="rate">5</div>
+                <button onclick="rateClicked(this, 1)" class="rate-button">1</button>
+                <button onclick="rateClicked(this, 2)" class="rate-button">2</button>
+                <button onclick="rateClicked(this, 3)" class="rate-button">3</button>
+                <button onclick="rateClicked(this, 4)" class="rate-button">4</button>
+                <button onclick="rateClicked(this, 5)" class="rate-button">5</button>
             </div>
-            <div class="submit item">Submit</div>
+            <div onclick="submit()" class="submit item">Submit</div>
+        </div>
+
+        <div class="thankyou-container hide">
+            <img class="ty-image" src="images/illustration-thank-you.svg" alt="">
+            <div class="ty-rate"></div>
+            <div class="ty-title">Thank you!</div>
+            <div class="ty-text">We appreciated you taking your time to give us a rating. If you ever need more support, don't hesitate to get in touch!</div>
         </div>
     </div>
 </body>

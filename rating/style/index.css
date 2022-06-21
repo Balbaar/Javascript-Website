@@ -19,17 +19,20 @@ body{
     background-color: var(--main-darkest-gray);
 }
 
-.object{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40%;
+.objects{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
-.container{
+.rate-container{
     background-color: var(--main-dark-gray);
     width: 400px;
-    border-radius: 10px;
+    height: 420px;
+    border-radius: 20px;
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -38,12 +41,20 @@ body{
 
 .star{
     background-color: var(--main-light-gray);
-    width: fit-content;
-    height: fit-content;
-    padding: 15px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-top: 25px;
     margin-left: 25px;
+}
+
+.star-image{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .title{
@@ -69,22 +80,35 @@ body{
     margin-top: 10px;
 }
 
-.rate{
+.rate-button{
+    background-color: transparent;
+    border: 0;
+    padding: 0;
     background-color: var(--main-light-gray);
     color: var(--main-lightest-gray);
     font-size: 1.5rem;
     font-weight: 800;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 0;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.2s;
 }
 
-.rate:hover{
+.rate-button-selected{
     background-color: var(--main-orange);
     color: var(--main-white);
+}
+
+
+.rate-button:hover{
+    background-color: var(--main-lightest-gray);
+    color: var(--main-white);
+}
+
+.rate-button-selected:hover{
+    background-color: var(--main-orange);
 }
 
 .submit{
@@ -100,12 +124,14 @@ body{
     margin-right: 25px;
     margin-bottom: 25px;
     margin-top: 10px;
-    transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
 }
 
 .submit:hover{
     background-color: var(--main-white);
     color: var(--main-orange);
+    transform: scale(1.03);
 }
 
 .item:nth-of-type(1){
@@ -130,4 +156,70 @@ body{
 .item:nth-of-type(5){
     grid-column: 1/6;
     grid-row: 5/5;
+}
+
+
+
+
+
+.thankyou-container{
+    background: var(--main-dark-gray);
+    border-radius: 20px;
+    width: 400px;
+    height: 420px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: min-content;
+}
+
+.ty-image{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin-top: 35px;
+    width: 190px;
+}
+
+.ty-rate{
+    grid-row: 3/4;
+    grid-column: 2/3;
+    background-color: var(--main-light-gray);
+    color: var(--main-orange);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    border-radius: 20px;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 30px;
+
+}
+
+.ty-title{
+    grid-row: 4/5;
+    grid-column: 2/3;
+    color: var(--main-white);
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.ty-text{
+    grid-row: 5;
+    grid-column: 1/4;
+    color: var(--main-lightest-gray);
+    font-weight: 800;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5rem;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.hide{
+    display: none;
 }

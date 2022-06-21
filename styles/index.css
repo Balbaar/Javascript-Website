@@ -17,25 +17,29 @@
 }
 
 body{
-    background: linear-gradient(35deg, var(--main-super-light-gray), var(--main-light-gray));
+    background: linear-gradient(135deg, var(--main-super-light-gray), var(--main-dark-gray));
     background-repeat: no-repeat;
+    height: 1000px;
 }
 
 .topbar{
     display: flex;
-    background: var(--main-darkest-gray);
+    background: var(--main-lightest);
     padding-top: 10px;
     padding-bottom: 10px;
     justify-content: center;
 }
 
+.topbar-title{
+    color: var(--main-darkest-gray);
+    font-size: 2rem;
+
+}
+
 .content{
     display: flex;
-    justify-content: space-between;
+    column-gap: 100px;
     padding-top: 50px;
-    row-gap: 30px;
-    column-gap: 30px;
-    flex-wrap: wrap;
     max-width: 1000px;
     left: 50%;
     transform: translate(-50%, 0);
@@ -47,21 +51,22 @@ a{
 }
 
 .project{
-    background: linear-gradient(to right, #00AAFF, #00FF6C);
+    background: linear-gradient(to right, var(--main-dark-gray), var(--main-light));
     border: var(--main-darkest-gray) 3px solid;
     width: 240px;
-    height: fit-content;
+    height: 400px;
     display: flex;
     flex-wrap: wrap;
     border-radius: 10px;
+    box-shadow: 0 10px 20px 15px var(--main-gray);
 }
 
 img{
     display: block;
-    width: 200px;
+    width: 180px;
     height: auto;
     border-radius: 20px;
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 .container{

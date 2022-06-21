@@ -92,7 +92,6 @@ equalButton.addEventListener("click", button => {
 })
 
 allclearButton.addEventListener("click", button => {
-    console.log("Hej")
     calculator.clear()
     calculator.updateDisplay()
 })
