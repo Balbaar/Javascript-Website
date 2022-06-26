@@ -1,0 +1,90 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: var(--blue1);
+    height: 100vh;
+}
+
+:root{
+    --blue1: #03045E;
+    --blue2: #023E8A;
+    --blue3: #0077B6;
+    --blue4: #0096C7;
+    --blue5: #00B4D8;
+    --blue6: #48CAE4;
+    --blue7: rgba(144, 224, 239, 0.7);
+    --blue8: #ADE8F4;
+    --blue9: #CAF0F8;
+}
+
+.hide{
+    display: none;
+}
+
+.background{
+    background:var(--blue7);
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 25%;
+    border-radius: 50px;
+    min-width: 400px;
+}
+
+.overhead{
+    margin-right: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    min-width: 400px;
+}
+
+.avatar{
+    width: 100px;
+    background-color: var(--blue9);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.title-skills{
+    font-size: 2rem;
+    height: fit-content;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+p:hover{
+    transform: translateY(-5px);
+}
+
+
+.title-about-me{
+    font-size: 2rem;
+    height: fit-content;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.content{
+    background: var(--blue2);
+    height: 500px;
+    border-radius: 50px;
+    position: absolute;
+    width: 50%;
+    min-width: 400px;
+
+}
+
+.start-state{
+    outline: 1px red solid;
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+}

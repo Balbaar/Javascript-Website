@@ -5,37 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <header class="topbar">
-        <div class="topbar-title">My Projects</div>
-    </header>
-    <div class="content">
-        <a target="_blank" href="calculator/index.html">
-            <div class="project">
-                <div class="container">
-                    <h1>Calculator</h1>
-                    <img src="assets/calculator.png" alt="">
-                    <div class="overlay">
-                        <div class="overlay-text">A simple calculator made using HTML, CSS and JavaScript.</div>
-                    </div>
-                    <h2>2022 - 06 - 14</h2>
-                </div>
+    <div class="layout">
+        <header class="topbar">
+            <img onclick="menu(this)" id="menu" class="menu-icon" src="assets/icons/menu.png" alt="">
+            <div class="topbar-title"><span class="blue">My</span><span class="dark-blue"> Projects</span></div>
+        </header>
+        <aside class="sidebar-container hide">
+            <div class="sidebar">
+                <img src="assets/icons/home.png" alt="">
             </div>
-            <a target="_blank" href="rating/index.html">
+        </aside>
+        <div class="content">
+            <a target="_blank" href="calculator/index.html">
                 <div class="project">
                     <div class="container">
-                        <h1>Rating</h1>
-                        <img src="assets/rating.PNG" alt="">
+                        <h1>Calculator</h1>
+                        <h2>2022 - 06 - 14</h2>
+                        <img src="assets/calculator.png" alt="">
                         <div class="overlay">
-                            <div class="overlay-text">Rating interface made using HTML, CSS and JavaScript.</div>
+                            <div class="overlay-text">A simple calculator made using HTML, CSS and JavaScript.</div>
                         </div>
-                        <h2>2022 - 06 - 20</h2>
                     </div>
                 </div>
+                <a target="_blank" href="rating/index.html">
+                    <div class="project">
+                        <div class="container">
+                            <h1>Rating</h1>
+                            <h2>2022 - 06 - 20</h2>
+                            <img src="assets/rating.PNG" alt="">
+                            <div class="overlay">
+                                <div class="overlay-text">Rating interface made using HTML, CSS and JavaScript.</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a target="_blank" href="about-me/index.html">
+                    <div class="project">
+                        <div class="container">
+                            <h1>Profile</h1>
+                            <h2>2022 - XX - XX</h2>
+                            <img src="#" alt="">
+                            <div class="overlay">
+                                <div class="overlay-text">About page with changing content.</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </a>
-        </a>
+        </div>
     </div>
 </body>
 </html>
